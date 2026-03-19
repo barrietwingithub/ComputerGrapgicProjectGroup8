@@ -18,16 +18,13 @@ class StatisticsCollector:
         current_time = time.time() - self.start_time
         self.time_steps.append(current_time)
 
-        # Density map
         density = agent_manager.get_density_map()
         self.density_history.append(density)
 
-        # Flow rate
         if agent_manager.agents:
             avg_speed = np.mean([a.velocity.magnitude() for a in agent_manager.agents])
             self.flow_rates.append(avg_speed)
 
-        # Congestion points (high density)
         if len(self.density_history) > 0:
             current_density = self.density_history[-1]
             threshold = np.mean(current_density) + np.std(current_density)

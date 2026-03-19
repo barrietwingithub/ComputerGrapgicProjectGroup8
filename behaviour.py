@@ -31,7 +31,6 @@ class BehaviorSystem:
                             obstacles: List[Obstacle]) -> Vector2D:
         avoidance = Vector2D(0, 0)
 
-        # --- Agent avoidance ---
         for other in neighbors:
             if other.id == agent.id:
                 continue
@@ -51,7 +50,6 @@ class BehaviorSystem:
 
                 avoidance += direction * strength
 
-        # --- Obstacle avoidance ---
         for obs in obstacles:
             obs_center = obs.position
             diff = agent.position - obs_center

@@ -36,21 +36,17 @@ class Environment:
 
     def _setup_default_environment(self):
         wall_thickness = 20
-        # Four walls
         self.obstacles.extend([
             Obstacle(len(self.obstacles), Vector2D(self.width/2, wall_thickness/2), self.width, wall_thickness, ObstacleType.WALL),
             Obstacle(len(self.obstacles), Vector2D(self.width/2, self.height - wall_thickness/2), self.width, wall_thickness, ObstacleType.WALL),
             Obstacle(len(self.obstacles), Vector2D(wall_thickness/2, self.height/2), wall_thickness, self.height, ObstacleType.WALL),
             Obstacle(len(self.obstacles), Vector2D(self.width - wall_thickness/2, self.height/2), wall_thickness, self.height, ObstacleType.WALL)
         ])
-        # Interior obstacles
         self.obstacles.extend([
             Obstacle(len(self.obstacles), Vector2D(300, 300), 50, 50, ObstacleType.STATIC),
             Obstacle(len(self.obstacles), Vector2D(500, 400), 30, 80, ObstacleType.STATIC)
         ])
-        # Goals
         self.goals.extend([Vector2D(750, 550), Vector2D(50, 50)])
-        # Spawn points
         self.spawn_points.extend([Vector2D(100, 100), Vector2D(700, 500), Vector2D(400, 300)])
 
     def add_obstacle(self, obstacle: Obstacle):

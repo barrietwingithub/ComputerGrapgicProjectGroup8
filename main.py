@@ -16,7 +16,6 @@ def main():
 
         if arg in ("--demo", "-d"):
 
-            # spawn larger crowd
             sim.spawn_agents(30)
 
         else:

@@ -1,4 +1,3 @@
-# General colors and default parameters
 WHITE = (255, 255, 255)
 GRAY = (100, 100, 100)
 LIGHT_GRAY = (150, 150, 150)
