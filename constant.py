@@ -1,0 +1,12 @@
+# General colors and default parameters
+WHITE = (255, 255, 255)
+GRAY = (100, 100, 100)
+LIGHT_GRAY = (150, 150, 150)
+RED = (255, 100, 100)
+GREEN = (0, 255, 0)
+DARK_GREEN = (0, 200, 0)
+BLACK = (0, 0, 0)
+
+DEFAULT_WIDTH = 800
+DEFAULT_HEIGHT = 600
+FPS = 60
